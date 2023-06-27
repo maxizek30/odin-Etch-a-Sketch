@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.box {
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+}
