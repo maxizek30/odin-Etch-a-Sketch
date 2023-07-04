@@ -11,12 +11,12 @@ createGrid();
 
 //creating grid
 function createGrid() {
-    
+     
     boxSide = (500 / sidesSize);
-    let borderSize = (boxSide / 40.0) * 5.0;
-    let insideSize = boxSide / 40.0 * 30.0;
-    insideSize = insideSize + "px";
-    borderSize = borderSize + "px";
+    //let borderSize = (boxSide / 40.0) * 5.0;
+    //let insideSize = boxSide / 40.0 * 30.0;
+    //insideSize = insideSize + "px";
+    ////borderSize = borderSize + "px";
     boxSide = boxSide + "px";
 
 
@@ -29,10 +29,10 @@ function createGrid() {
             box.setAttribute('class', 'box'); 
             box.setAttribute('id', id);   
             box.addEventListener('mouseover', changeBox);
-            box.style.width = insideSize;
-            box.style.height = insideSize;
-            box.style.borderStyle = "solid";
-            box.style.borderWidth = borderSize;
+            box.style.width = boxSide;
+            box.style.height = boxSide;
+            //box.style.borderStyle = "solid";
+            //box.style.borderWidth = borderSize;
             row.appendChild(box)  
             
         }
