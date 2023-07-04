@@ -1,16 +1,32 @@
 const etchasketch = document.querySelector('.etchasketch');
 //default size of grid
 let sidesSize = 16;
-//if size of the grid is pushed
-const sizeButton = document.getElementById('setSizeButton');
-sizeButton.addEventListener('click', test);
 const grid = document.querySelector('.grid');
+//if reset button is pushed 
+const resetButton = document.getElementById('reset');
+resetButton.addEventListener('click', () => {
+    grid.replaceChildren();
+    createGrid();
+});
+//slider functionality
+const slider = document.getElementById("myRange");
+slider.oninput = function() {
+    sidesSize = this.value;
+    grid.replaceChildren();
+    createGrid();
+}
+const sliderText = document.querySelector('.sizeLabel');
+
+
+
+
+
 //flow 
 createGrid();
 
 //creating grid
 function createGrid() {
-     
+    sliderText.innerHTML = sidesSize + " x " + sidesSize;
     boxSide = (500 / sidesSize);
     //let borderSize = (boxSide / 40.0) * 5.0;
     //let insideSize = boxSide / 40.0 * 30.0;
@@ -39,7 +55,7 @@ function createGrid() {
 }
 //changing color of box
 function changeBox(e) {
-    e.target.style.background = 'black';
+    e.target.style.background = '#424647';
 }
 function resetGrid() {
 
@@ -52,14 +68,13 @@ function getUserInput() {
     }
     return num;
 }
-//setting the sidesSize
-function setSidesSize (size) {
-    sidesSize = size;
-}
-//test
-function test () {
-    console.log("Hello");
-    sidesSize = prompt("Please a number", "number 1 -100");
+//resetting the size
+function setSidesSize () {
+    let num = -1; 
+    while (num <= 0 || num > 100) {
+        num = prompt("Please enter the amount of squares per row(1-100)");
+    }
+    sidesSize = num;
     grid.replaceChildren();
     createGrid();
 }
