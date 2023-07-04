@@ -1,4 +1,4 @@
-const container = document.querySelector('.container');
+const etchasketch = document.querySelector('.etchasketch');
 //default size of grid
 let sidesSize = 16;
 //if size of the grid is pushed
@@ -7,7 +7,6 @@ sizeButton.addEventListener('click', test);
 const grid = document.querySelector('.grid');
 //flow 
 createGrid();
-
 
 //creating grid
 function createGrid() {
@@ -18,8 +17,6 @@ function createGrid() {
     //insideSize = insideSize + "px";
     ////borderSize = borderSize + "px";
     boxSide = boxSide + "px";
-
-
     for (let i = 0; i < sidesSize; i++) {
         const row = document.createElement('div');
         row.setAttribute('class', 'row');   
@@ -38,11 +35,11 @@ function createGrid() {
         }
         grid.appendChild(row);
     }
-    container.appendChild(grid);
+    
 }
 //changing color of box
 function changeBox(e) {
-    e.target.style.background = 'white';
+    e.target.style.background = 'black';
 }
 function resetGrid() {
 
