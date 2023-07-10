@@ -105,3 +105,20 @@ body {
     background: black; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
+  .footer {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #C3C6C5;
+    color: black;
+    text-align: center;
+    height: 40px;
+    font-weight: bold;
+  }
+  .footer a {
+    color: #AE1A20;
+    text-decoration: none;
+  }
